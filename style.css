@@ -485,14 +485,18 @@ body {
   align-items: stretch;
 }
 
-/* for screen less than 480px */
-@media (max-width: 480px) {
-
-  /* Stack content vertically */
+/* =========================
+   Mobile Responsive Fix
+   ========================= */
+@media (max-width: 768px) {
   .about-inner {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 24px;
+    text-align: center;
   }
+}
+
 
   /* Reduce padding for small screens */
   .about-card {
@@ -526,14 +530,21 @@ body {
     justify-content: center;
   }
 
-  .about-image-box img {
-    width: 100%;
-    max-width: 240px;
-    border-radius: 16px;
-  }
+ .about-image-box img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+}
+.about-card {
+  overflow: hidden;
 }
 
-/* For screen less than 400px */
+
+
+/* =========================
+   Extra Small Screens (≤350px)
+   ========================= */
 @media (max-width: 400px) {
 
   .about-card {
@@ -790,7 +801,24 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 
+/* .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
+.project-link:hover {
+  color: #7dd3fc;
+}
+
+.project-link svg {
+  width: 20px;
+  height: 20px;
+} */
 
 
 .education-content,
@@ -1155,4 +1183,22 @@ body {
 .section,
 .section-alt {
   background: transparent !important;
+}
+
+
+
+
+@media (max-width: 350px) {
+  .about-card {
+    padding: 14px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .about-image-box img {
+    max-width: 200px;
+  }
 }
