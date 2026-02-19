@@ -1202,3 +1202,54 @@ body {
     max-width: 200px;
   }
 }
+/* =========================
+   CSS-only Hamburger Menu
+   ========================= */
+
+/* Hide checkbox */
+#nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* sidebar panel in navbar from less than 768px */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+
+    background: linear-gradient(135deg, #020617 0%, #082f49 45%, #0c4a6e 100%);
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 0;
+
+    display: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Toggle menu */
+  #nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+/* Make label clickable without breaking styles */
+.nav-links label {
+  cursor: pointer;
+}
+
