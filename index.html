@@ -5,26 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Debraj Mondal - Portfolio</title>
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <link rel="stylesheet" href="style.css" />
+   <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="stylesheet" href="/style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <meta property="og:image" content="https://bolt.new/static/og_default.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">Debraj Mondal</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <!-- <li><a href="#certifications">Certifications</a></li> -->
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="nav-brand">Debraj Mondal</div>
+
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="nav-toggle">
+
+    <!-- Hamburger icon -->
+    <label for="nav-toggle" class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="nav-links">
+  <li><label for="nav-toggle"><a href="#about">About</a></label></li>
+  <li><label for="nav-toggle"><a href="#skills">Skills</a></label></li>
+  <li><label for="nav-toggle"><a href="#projects">Projects</a></label></li>
+  <li><label for="nav-toggle"><a href="#education">Education</a></label></li>
+  <li><label for="nav-toggle"><a href="#interests">Interests</a></label></li>
+  <li><label for="nav-toggle"><a href="#contact">Contact</a></label></li>
+</ul>
+
+
+  </div>
+</nav>
+
 
   <section class="hero" id="hero">
     <div class="hero-content">
@@ -39,7 +60,7 @@
       <p class="hero-tagline">Passionate about building innovative web applications and exploring machine learning solutions</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Get In Touch</a>
-         <a href="Resume.pdf" class="btn btn-secondary" target="_blank">View Resume</a>
+         <a href="Resume_TCS.pdf" class="btn btn-secondary" target="_blank">View Resume</a>
         
 
       </div>
@@ -286,5 +307,14 @@
       </div>
     </div>
   </footer>
+  <script>
+  const toggle = document.getElementById("nav-toggle");
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      toggle.checked = false;
+    });
+  });
+</script>
+
 </body>
 </html>
